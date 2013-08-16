@@ -1,9 +1,9 @@
-%define	api_version	1.0
-%define	lib_major	0
-%define	libname		%mklibname pangox %{api_version} %{lib_major}
-%define	devname		%mklibname -d pangox
-
 %define	url_ver		%(echo %{version}|cut -d. -f1,2)
+
+%define	api	1.0
+%define	major	0
+%define	libname	%mklibname pangox %{api} %{major}
+%define	devname	%mklibname -d pangox
 
 Summary:	Compatibility library providing the obsolete pangox library
 Name:		pangox-compat
@@ -11,8 +11,8 @@ Version:	0.0.2
 Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
-URL:		http://www.pango.org/
-Source0:	http://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		http://www.pango.org/
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(glib-2.0) >= 2.31.0
 BuildRequires:	pkgconfig(gmodule-no-export-2.0)
 BuildRequires:	pkgconfig(gobject-2.0)
@@ -58,11 +58,10 @@ for the pangox package.
 %config(noreplace) %{_sysconfdir}/pango/pangox.aliases
 
 %files -n %{libname}
-%{_libdir}/libpangox-%{api_version}.so.%{lib_major}*
+%{_libdir}/libpangox-%{api}.so.%{major}*
 
 %files -n %{devname}
-%{_libdir}/libpangox-%{api_version}.so
+%{_libdir}/libpangox-%{api}.so
 %{_libdir}/pkgconfig/*
 %{_includedir}/*
-
 
