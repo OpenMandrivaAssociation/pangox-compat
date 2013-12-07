@@ -8,7 +8,7 @@
 Summary:	Compatibility library providing the obsolete pangox library
 Name:		pangox-compat
 Version:	0.0.2
-Release:	3
+Release:	4
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.pango.org/
