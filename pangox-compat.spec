@@ -11,7 +11,7 @@ Version:	0.0.2
 Release:	13
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://www.pango.org/
+Url:		https://www.pango.org/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(glib-2.0) >= 2.31.0
 BuildRequires:	pkgconfig(gmodule-no-export-2.0)
